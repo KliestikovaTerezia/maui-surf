@@ -1,0 +1,155 @@
+ /* HEADER */
+ header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  z-index: 1000;/*header zostane on top a stranka bude skrolovana popod nu*/
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #a2c6d2;
+}
+
+.bi { /*velkost ikoniek*/
+  font-size: 23px;
+  font-weight: bold
+}
+
+.bi-list { /*velkost ikonky triciarky*/
+  font-size: 30px;
+  padding-left: 10px;
+}
+
+.bi-person {
+  font-size: 25px;
+  color: black;
+}
+
+.icon_click:hover {
+  color: #26769C;
+}
+
+.logo-container img {
+  height: 30px;
+  width: auto;
+  position: relative;
+  top: -7px;
+  text-decoration: none;
+}
+
+.icons a{
+  text-decoration: none;  
+  color: inherit;          
+  font: inherit; 
+}
+
+.link_neviditelny{
+  color: rgba(255, 255, 255, 0);
+}
+/* PRODUCT OVERVIEW */
+.product-overview-container {
+position: fixed;
+top: 60px; /* Below header */
+left: 0;
+background-color: #ffffff;
+padding: 20px;
+z-index: 999;
+transform: translateX(-100%); /* Start off-screen to the left */
+transition: transform 0.3s ease-in-out; /* Smooth sliding */
+}
+.thin {
+font-weight: 100;
+}
+
+/* REFERENCES */
+.product-overview-container a {
+text-decoration: none;
+color: inherit;
+font: inherit;
+}
+/* Class to show the container by sliding it in */
+.product-overview-container.visible {
+transform: translateX(0); /* Slide to visible position */
+}
+.product-overview {
+max-width: 1200px;
+height: fit-content;
+margin: 1vw 0 0 1vw;
+}
+
+/* For phones (100% width and height on mobile) */
+@media (max-width: 480px) {
+.product-overview-container {
+  width: 100vw; /* Full width on mobile */
+  height: 100vh; /* Full height on mobile */
+}
+}
+
+/* For larger screens (Desktop view stays fixed) */
+@media (min-width: 481px) {
+.product-overview-container {
+  width: 500px; /* Fixed width */
+  height: 100%; /* Fixed height */
+}
+}
+
+.category {
+margin-bottom: max(1.5vw, 20px);
+}
+
+.category:hover {
+color: #26769C;
+}
+
+.product-overview ul ul li {
+cursor: pointer;
+margin-bottom: 0.5vw;
+}
+
+.product-overview ul ul li:hover {
+color: #26769C;
+}
+
+/* acting of product overview */
+.product-overview ul {
+list-style-type: none; /* Removes bullet points */
+padding-left: 0; /* Removes left padding */
+}
+
+.product-overview li {
+cursor: pointer; /* Makes it clear that the items are clickable */
+}
+
+/* Move subcategories to the right */
+.product-overview ul ul {
+margin-left: 20px; /* Adjust the margin to move the subcategories */
+margin-bottom: max(1.5vw, 20px);
+}
+
+/*FOOTER*/
+.footer {
+background-color: #26769C;
+color: white;
+min-height: 200px;  
+padding: 4vw 0; 
+width: 100%;
+margin-top: 10vw;
+}
+
+.footer_heading {
+font-size: clamp(15px, 2.5vw, 40px);
+}
+
+.footer-info {
+text-align: center;
+font-size: clamp(13px, 1.7vw, 40px);
+font-weight: 300;
+}
+
+.share {
+font-size: clamp(13px, 1.7vw, 40px);
+margin-left: 0.5vw;
+}

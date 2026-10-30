@@ -1,0 +1,15 @@
+.git
+.env
+.env.backup
+.env.production
+.vscode
+.DS_Store
+**/.DS_Store
+node_modules
+vendor
+bootstrap/cache/*.php
+storage/logs/*
+storage/framework/cache/data/*
+storage/framework/sessions/*
+storage/framework/views/*
+tests
