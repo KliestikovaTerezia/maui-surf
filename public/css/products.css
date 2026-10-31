@@ -546,6 +546,21 @@ gap: 5px;
   position: relative;
   overflow: hidden;
 }
+
+/* velke obrazovky - produkty siroke ako navigacia SURFBOARDS/EQUIPMENT/ACCESSORIES
+   ("body" pred selektorom, aby to neprepisal bootstrap, ktory sa nacitava neskor) */
+@media (min-width: 1400px) {
+  body .container {
+    max-width: max(1320px, 80vw);
+  }
+}
+
+@media (min-width: 2000px) {
+  body .row-cols-lg-4 > * {
+    width: 20%;
+  }
+}
+
 .product-image-wrapper {
   width: 100%;
   aspect-ratio: 4 / 5;

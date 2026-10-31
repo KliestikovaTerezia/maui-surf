@@ -424,10 +424,21 @@ select[name="select_size"]:focus,
     font-size: 2.3vw;
 }
 
+/* srdiecko rovnako vysoke ako Buy a rastie spolu s nim */
+.fav, .fav form {
+    display: flex !important; /* prepise bootstrap d-inline na formulari */
+}
+
 .fav-button {
+    font-size: 2.5vw;
     border-top-left-radius: 0.6vw;
     border-bottom-left-radius: 0.6vw;
     padding: 1vw 2vw;
+}
+
+.fav-button .bi {
+    font-size: max(0.75em, 18px);
+    line-height: 1;
 }
 
 .buy-button {
@@ -752,7 +763,7 @@ select[name="select_size"]:focus,
         padding: 2vw 4vw;
     }
 
-    .buy-button {
+    .fav-button, .buy-button {
         font-size: min(4vw, 18px);
     }
 

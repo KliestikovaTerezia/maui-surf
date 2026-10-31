@@ -2,6 +2,11 @@
 
 @section('title', 'Favorites')
 
+<!-- pre maui surf nazov v headeri -->
+@php
+    $showOverlay = true;
+@endphp
+
 @push('styles')
     <link rel="stylesheet" href="{{ asset('css/favorites.css') }}">
 @endpush
@@ -11,15 +16,8 @@
 @endpush
 
 @section('content')
-    <div class="container my-5">
+    <div class="container my-5 favorites-heading">
         <h2 class="text-center mb-4">Your Favorite Products</h2>
-        <div class="row g-4">
-    </div>
-
-    <div class="store-name text-center overlay-text">
-        <a href="{{ route('homepage') }}" aria-label="Homepage">
-            Maui Surf
-        </a>
     </div>
 
     <div class="container my-4">

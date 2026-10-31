@@ -202,6 +202,11 @@ class CartController extends Controller
     }
     
     public function step2(){
+        // predvolene hodnoty, ak ich user nema vyplnene
+        $phone = '';
+        $email = '';
+        $country = '';
+
         // kontrola, ci je user prihlaseny
         if (Auth::check()) {
             $user = Auth::user();
@@ -234,9 +239,6 @@ class CartController extends Controller
     
             $firstName = '';
             $lastName = '';
-            $phone = '';
-            $email = '';
-            $country = '';
         }
     
         // celkova cena kosiku

@@ -1,0 +1,43 @@
+/* Spolocne styly pre vsetky stranky - nacitane az po stylesheetoch jednotlivych stranok */
+
+/* HEADER - na velkych obrazovkach rastie spolu so sirkou, na beznych zostava ako predtym */
+:root {
+  --header-height: clamp(60px, 3.2vw, 90px);
+}
+
+header {
+  height: var(--header-height) !important;
+}
+
+header .bi {
+  font-size: clamp(23px, 1.25vw, 34px);
+}
+
+header .bi-list {
+  font-size: clamp(30px, 1.6vw, 44px);
+}
+
+header .bi-person,
+header .bi-person-gear {
+  font-size: clamp(25px, 1.35vw, 36px);
+}
+
+header .logo-container img {
+  height: clamp(30px, 1.6vw, 44px);
+}
+
+.product-overview-container {
+  top: var(--header-height) !important;
+}
+
+/* FOOTER - vzdy na spodku stranky, aj ked je obsahu malo */
+body {
+  min-height: 100vh;
+  height: auto !important;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}

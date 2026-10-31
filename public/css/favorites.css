@@ -147,22 +147,34 @@ header {
 
 
 /* NAZOV NADPIS */
-  .overlay-text { 
-    font-family: 'MilkyWalky';
-    position: absolute;
-    top: 10%;
-    left: 50%; 
-    z-index: 1000;
-    transform: translate(-50%, -50%); 
-    color: #26769C;
-    font-size: min(10vw, 80px); 
-  }
+.overlay-link {
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-decoration: none;
+  color: inherit;
+  font: inherit;
+}
 
-  .overlay-text a {
-    text-decoration: none;  
-    color: inherit;          
-    font: inherit;           
+.overlay-text {
+  font-family: 'MilkyWalky';
+  color: #26769C;
+  font-size: min(9vw, 60px);
+  transition: top 0.2s ease-out;
+  cursor: pointer;
+}
+
+@media (max-width: 400px) {
+  .overlay-text {
+    display: none;
   }
+}
+
+/* nadpis pod Maui Surf - odstup rastie s vyskou headera */
+body .favorites-heading {
+  margin-top: max(3rem, calc(var(--header-height) - 10px)) !important;
+}
 
 /* PRODUKT */
 .link_neviditelny{
@@ -210,6 +222,20 @@ header {
     width: 100%;
     height: auto;
     border-radius: 8px;
+}
+
+/* velke obrazovky - obsah siroky ako na stranke produktov
+   ("body" pred selektorom, aby to neprepisal bootstrap, ktory sa nacitava neskor) */
+@media (min-width: 1400px) {
+  body .container {
+    max-width: max(1320px, 80vw);
+  }
+}
+
+@media (min-width: 2000px) {
+  body .row-cols-lg-4 > * {
+    width: 20%;
+  }
 }
 .card{
   padding: 10px;

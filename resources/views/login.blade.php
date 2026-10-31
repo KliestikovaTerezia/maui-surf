@@ -20,7 +20,7 @@
 
 <main class="prihlasovacky">
     <div class="background-image"></div>
-    <div class="row justify-content-center">    
+    <div class="row justify-content-center mx-0">
         <!-- Log In-->
         <div class="prihlasovacky_box col-md-5 p-5 rounded shadow-sm">
             <h2 class="text-center">LOG IN</h2>
